@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/Style.css  ' %}"/>
+    <title>3D Card Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form>
+                <div class="input-group">
+                    <input class="input" type="text" id="name" required/>
+                    <label class="input" for="name"><span>Name</span></label>
+                </div>
+                <div class="input-group" >
+                    <input class="input" id="date" type="text" required/>
+                    <label class="input" for="date"><span>Birth Date</span></label>
+                </div>
+                <div class="input-group">
+                    <input class="input" id="email" type="text" required/>
+                    <label class="input" for="email"><span>Email</span></label>
+                </div>
+                <div class="input-group">
+                    <input class="input" id="phone" type="phone" required/>
+                    <label class="input" for="phone"><span>Phone no.</span></label>
+                </div>
+                <div class="same-row">
+                    <input class="input" type="radio" id="male" name="gender"/>
+                    <label class="input" for="male">Male</label>
+                    <input class="input" type="radio" id="female" name="gender"/>
+                    <label class="input" for="female">Female</label>
+                    <input class="input" type="checkbox" id="remember"/>
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script rel="script" type="application/ecmascript" src="{% static '/js/Script.js' %}"></script>
+</body>
+</html>
