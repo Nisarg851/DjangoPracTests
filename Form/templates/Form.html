@@ -10,29 +10,30 @@
 <body>
     <div class="container">
         <div class="card">
-            <form>
+            <form action="newUser/" method="POST">
+                {% csrf_token %}
                 <div class="input-group">
-                    <input class="input" type="text" id="name" required/>
+                    <input class="input" type="text" id="name" name="name" required/>
                     <label class="input" for="name"><span>Name</span></label>
                 </div>
                 <div class="input-group" >
-                    <input class="input" id="date" type="text" required/>
+                    <input class="input" id="date" type="text" name="date" required/>
                     <label class="input" for="date"><span>Birth Date</span></label>
                 </div>
                 <div class="input-group">
-                    <input class="input" id="email" type="text" required/>
+                    <input class="input" id="email" type="text" name="email" required/>
                     <label class="input" for="email"><span>Email</span></label>
                 </div>
                 <div class="input-group">
-                    <input class="input" id="phone" type="phone" required/>
+                    <input class="input" id="phone" type="phone" name="phone" required/>
                     <label class="input" for="phone"><span>Phone no.</span></label>
                 </div>
                 <div class="same-row">
-                    <input class="input" type="radio" id="male" name="gender"/>
+                    <input class="input" type="radio" id="male" value="male" checked name="gender"/>
                     <label class="input" for="male">Male</label>
-                    <input class="input" type="radio" id="female" name="gender"/>
+                    <input class="input" type="radio" id="female" value="female" name="gender"/>
                     <label class="input" for="female">Female</label>
-                    <input class="input" type="checkbox" id="remember"/>
+                    <input class="input" type="checkbox" name="remember" id="remember"/>
                     <label for="remember">Remember me</label>
                 </div>
                 <button type="submit">Submit</button>
