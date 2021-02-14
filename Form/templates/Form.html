@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static '/css/Style.css  ' %}"/>
     <title>3D Card Form</title>
 </head>
 <body>
     <div class="container">
         <div class="card">
+            <div class="title">
+                <span>Registration Form</span>
+                <button class="check-user-btn"><a href="UserList/">Check User <i class="fa fa-arrow-right"></i></a></button>
+            </div>
             <form action="newUser/" method="POST">
                 {% csrf_token %}
                 <div class="input-group">
@@ -40,7 +45,6 @@
             </form>
         </div>
     </div>
-
     <script rel="script" type="application/ecmascript" src="{% static '/js/Script.js' %}"></script>
 </body>
 </html>

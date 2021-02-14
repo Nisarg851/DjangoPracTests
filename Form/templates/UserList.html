@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="{% static '/css/UsersStyle.css  ' %}" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="list-page">
+        <h1>Registered Users</h1>
+        <div class="list-box">
+            <ul class="list" style="list-style-type: none;">
+                {% for user in users %}
+                    <div class="todo-container">
+                        <li class="todo">{{user}}</li>
+                        <button class="btn btn-checkbtn"><i class="fa fa-check"></i></button>
+                        <button class="btn btn-trashbtn"><i class="fa fa-trash"></i></button>
+                    </div>
+                {% endfor %}
+            </ul>
+        </div>  
+    </div>
+    <script src="{% static '/js/UsersScript.js'%}" defer>
+    </script>
+</body>
+</html>

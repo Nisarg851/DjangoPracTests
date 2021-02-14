@@ -7,8 +7,13 @@ def index(request):
 
 def newUser(request):
     if request.method == 'POST':
-        Form.FormSubmit(request)
+        userInfo = Form.FormSubmit(request)
+        Form.sendUserInfoToMail(userInfo)
         return HttpResponse("Registered")
     else:
         return HttpResponse("Please Enter a value")
+
+def list(request):
+    users = Form.SubmittedForms(request)
+    return render(request,'UserList.html', {'users':users})
 
